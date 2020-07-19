@@ -19,7 +19,7 @@
 		B057F89A2446D0900039A76D /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057F8992446D0900039A76D /* Mission.swift */; };
 		B057F89C2446D5240039A76D /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057F89B2446D5240039A76D /* MissionView.swift */; };
 		B057F89E2446D8A50039A76D /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057F89D2446D8A50039A76D /* AstronautView.swift */; };
-		B06C494024C3AD9000441BD4 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06C493F24C3AD9000441BD4 /* DataSource.swift */; };
+		B06C494024C3AD9000441BD4 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06C493F24C3AD9000441BD4 /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		B057F8992446D0900039A76D /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		B057F89B2446D5240039A76D /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		B057F89D2446D8A50039A76D /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
-		B06C493F24C3AD9000441BD4 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		B06C493F24C3AD9000441BD4 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 			children = (
 				B057F8952446CF3B0039A76D /* Astronaut.swift */,
 				B057F8972446CFA20039A76D /* Bundle+Decodable.swift */,
-				B06C493F24C3AD9000441BD4 /* DataSource.swift */,
+				B06C493F24C3AD9000441BD4 /* DataStore.swift */,
 				B057F8992446D0900039A76D /* Mission.swift */,
 			);
 			path = Data;
@@ -189,7 +189,7 @@
 				B057F89A2446D0900039A76D /* Mission.swift in Sources */,
 				B057F89E2446D8A50039A76D /* AstronautView.swift in Sources */,
 				B057F87D2446CB100039A76D /* MoonshotApp.swift in Sources */,
-				B06C494024C3AD9000441BD4 /* DataSource.swift in Sources */,
+				B06C494024C3AD9000441BD4 /* DataStore.swift in Sources */,
 				B057F8982446CFA20039A76D /* Bundle+Decodable.swift in Sources */,
 				B057F8812446CB100039A76D /* ContentView.swift in Sources */,
 				B057F8962446CF3B0039A76D /* Astronaut.swift in Sources */,

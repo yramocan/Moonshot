@@ -1,7 +1,7 @@
 import Foundation
 
 final class DataStore: ObservableObject {
-    enum DataSourceError: Error {
+    enum DataStoreError: Error {
         case astronautNotFound
         case decodeError
         case missionNotFound
@@ -9,8 +9,6 @@ final class DataStore: ObservableObject {
 
     @Published private(set) var astronauts = [Astronaut]()
     @Published private(set) var missions = [Mission]()
-
-    private var queue = DispatchQueue(label: "datastore.queue", attributes: .concurrent)
 
     init() {
         loadData { result in
@@ -32,7 +30,7 @@ final class DataStore: ObservableObject {
                 let mission = self.missions.first(where: { $0.id == missionID })
             else {
                 DispatchQueue.main.async {
-                    completion(.failure(DataSourceError.missionNotFound))
+                    completion(.failure(DataStoreError.missionNotFound))
                 }
 
                 return
@@ -55,7 +53,7 @@ final class DataStore: ObservableObject {
                 let astronaut = self.astronauts.first(where: { $0.id == astronautID })
             else {
                 DispatchQueue.main.async {
-                    completion(.failure(DataSourceError.astronautNotFound))
+                    completion(.failure(DataStoreError.astronautNotFound))
                 }
 
                 return
@@ -78,7 +76,7 @@ final class DataStore: ObservableObject {
                 let missions: [Mission] = try? Bundle.main.decode("missions.json")
             else {
                 DispatchQueue.main.async {
-                    completion(.failure(DataSourceError.decodeError))
+                    completion(.failure(DataStoreError.decodeError))
                 }
 
                 return
