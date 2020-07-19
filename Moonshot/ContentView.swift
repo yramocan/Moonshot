@@ -1,16 +1,33 @@
-//
-//  ContentView.swift
-//  Moonshot
-//
-//  Created by Yuri Ramocan on 4/15/20.
-//  Copyright © 2020 Yuri Ramocan. All rights reserved.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var dataStore: DataStore
+
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            Group {
+                if dataStore.missions.isEmpty {
+                    ProgressView()
+                } else {
+                    List(dataStore.missions) { mission in
+                        NavigationLink(destination: MissionView(mission: mission)) {
+                            HStack {
+                                Image(mission.image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 44, height: 44)
+
+                                VStack(alignment: .leading) {
+                                    Text(mission.displayName)
+                                    Text(mission.formattedLaunchDate)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .navigationBarTitle("Moonshot")
+        }
     }
 }
 
